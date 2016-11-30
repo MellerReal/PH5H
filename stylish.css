@@ -14,8 +14,8 @@
 }
 
 @font-face {
-    font-family: "Subway";
-    src: url("./files/SubWay.ttf");
+    font-family: "Volter";
+    src: url("./files/Volter_G.ttf");
 }
 
 * {
@@ -890,4 +890,200 @@ footer #user img {
     margin-right: -2px;
     padding-left: 4px;
     padding-right: 4px;
+}
+
+.box_x4 #information #empty {
+    margin-left: 74px;
+    margin-top: 30px;
+}
+
+.box_x4 #information #title {
+    float: right;
+    font-size: 13px;
+    margin-right: 45px;
+    margin-top: 50px;
+    font-family: "Titles";
+    font-weight: bold;
+    color: #DF1010;
+}
+
+.box_x4 #information #description {
+    max-width: 160px;
+    float: right;
+    font-size: 12px;
+    margin-right: 45px;
+    margin-top: -130px;
+    font-family: "Normal";
+    font-weight: bold;
+    color: #000;
+}
+
+.box_x4 #information .search_bar {
+    width: 468px;
+    height: 25px;
+    background-color: #C9C9C9;
+    border-radius: 6px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3px;
+}
+
+.box_x4 #information .search_bar input[type=text] {
+    width: 132px;
+    font-weight: normal;
+    font-family: Arial;
+    font-size: 9pt;
+    background: #FFF;
+    height: 16px;
+    border: 1px solid #505050;
+    border-radius: 5px;
+    padding-left: 5px;
+    margin-left: 4px;
+    margin-top: 3px;
+}
+/*
+.box_x4 #information .search_bar input[type=text]:focus {
+    background: url("./files/images/other/sprites.png") -112px 0px #FFF;
+}
+*/
+
+.box_x4 #information #tba {
+    margin-left: 250px;
+    margin-top: -20px;
+    color: #FFF;
+}
+
+.box_x4 #information .items {
+    margin-left: 8px;
+    margin-top: 2px;
+    max-width: 260px;
+}
+
+.box_x4 #information #hold {
+    margin-right: 4px;
+    display: inline-block;
+    background: url("./files/images/other/hold_sprite.png") 0px 0px;
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    text-align: center;
+    padding: auto;
+    cursor: pointer;
+    margin-bottom: 4px;
+    overflow: hidden;
+    position: relative;
+}
+
+.box_x4 #information #hold img {
+    height: auto;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1px;
+    padding: 5px;
+    z-index: 51;
+}
+
+.box_x4 #information #hold #counts {
+    position: absolute;
+    z-index: 52;
+    overflow: hidden;
+    right: 1px;
+    font-family: "Volter";
+    font-size: 7pt; /*Normal*/
+    padding-top: 2px;
+    margin-top: 2px;
+    float: right;
+    color: #2F6982;
+    font-weight: normal;
+    background: #FFF;
+    border-left: 1px solid #2F6982;
+    border-top: 1px solid #2F6982;
+    border-bottom: 1px solid #2F6982;
+    height: 11px;
+    width: 13px;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.box_x4 #information #item_data {
+    position: absolute;
+    left: 300px;
+    height: 238px;
+    width: 170px;
+    top: 30px;
+    overflow: hidden;
+}
+
+.box_x4 #information #item_data #tradeable {
+    background: url("./files/images/other/sprites.png") -112px 0px;
+    height: 15px;
+    width: 31px;
+}
+.box_x4 #information #item_data #non_tradeable {
+    background: url("./files/images/other/sprites.png") -143px 0px;
+    height: 15px;
+    width: 40px;
+}
+
+.box_x4 #information #item_data #recycleable {
+    background: url("./files/images/other/sprites.png?") -112px -15px;
+    height: 16px;
+    width: 16px;
+    margin-top: 1px;
+}
+.box_x4 #information #item_data #non_recycleable {
+    background: url("./files/images/other/sprites.png?") -128px -15px;
+    height: 16px;
+    width: 28px;
+    margin-top: 1px;
+}
+
+.box_x4 #information #item_data #furni_hold {
+    width: 170px;
+    height: 90px;
+    background: url("./files/images/other/furni_hold_image.png");
+    position: absolute;
+    top: 50px;
+}
+
+.box_x4 #information #item_data #furni_hold #itself {
+    position: absolute;
+    bottom: 27px;
+    width: 62px;
+    margin: auto;
+    left: 0;
+    right: 0;
+}
+
+.box_x4 #information #item_data #furni_hold #itself img {
+    margin: auto;
+}
+
+.box_x4 #information #item_data #name {
+    margin-top: 115px;
+    font-family: "Titles";
+    font-weight: bold;
+}
+.box_x4 #information #item_data #desc {
+    margin-top: -13px;
+    font-size: 9pt;
+    font-family: "Normal";
+    font-weight: bold;
+}
+
+.box_x4 #information #item_data #button {
+    -webkit-appearance: none;
+    width: 99px;
+    height: 19px;
+    position: absolute;
+    left: 0;
+    bottom: 35px;
+    background: url("./files/images/other/button2.png") transparent;
+    border:none;
+    font-size: 10pt;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: none;
+    padding-top: 3px;
 }

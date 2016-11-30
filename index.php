@@ -20,6 +20,10 @@
         <?php require "files/external_variables.php"; echo"\n"; ?>
         <!-- End of Loading External Variables -->
 
+        <!-- Load Items (PHP) -->
+        <?php require "files/items/items.php"; ?>
+        <!-- End of Loading Items -->
+
         <!-- Landing View -->
             <?php if(!isset($_SESSION["user"])) { ?>
             <div id="landing_view_background_bottom_left" style="background: url(<?php echo $external_variables["landing.view.background.bottom.left"]; ?>) no-repeat;"></div>
@@ -126,7 +130,7 @@
         <!-- Inventory -->
             <div class="box_x4">
                 <div id="header">
-                    <p id="title">Inventory</p>
+                    <p id="title">Inventory (Paused for the RoomManager to get in the view)</p>
                     <div id="close" onclick="cross('box_x4');"></div>
                 </div>
                 <div id="information">

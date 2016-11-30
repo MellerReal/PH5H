@@ -5,5 +5,6 @@ $external_variables = array(
     "landing.view.background.gradient" => "files/images/landing/gradient_xmas16.gif",
     "landing.view.background.logo" => "files/images/landing/reception_logo.gif",
     "help.box.image" => "files/images/other/help_image.png",
-    "purse.logout.url" => "http://localhost/files/extension.php?logout");
+    "purse.logout.url" => "http://localhost/files/extension.php?logout",
+    "inventory.empty.image" => "files/images/other/inventory_image.png");
 ?>

@@ -22,9 +22,14 @@ function findFriends(id) {
     $(".box_x3").show();
 };
 
+function InventoryManagerPlaneInRoom() {
+    $(".box_x3 #information").html("You're not in any room!");
+    $(".box_x3").show();
+}
+
 function InventoryManager(id) {
     if(id == "furni") {
-        $(".box_x4 #information").html("InventoryManager.Furni().html();");
+        $(".box_x4 #information").load("./files/extension.php?furnitures=true");
         $(".box_x4 #bar #furnitures").css({"background" : " #ECEAE0", "border-left" : " 2px solid #FFF", "border-right" : " 2px solid #FFF", "border-top" : " 2px solid #FFF", "box-shadow" : " 0px 0px 0px 2px #000", "margin-right" : " -2px", "padding-left" : " 4px", "padding-right" : " 4px"});
         $(".box_x4 #bar #rentables").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 6px", "padding-right" : " 6px"});
         $(".box_x4 #bar #pets").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 6px", "padding-right" : " 6px"});
@@ -66,6 +71,19 @@ function InventoryManager(id) {
 }
 
 var footer_right_toggle = 0;
+var inventory_selected = 0;
+
+function ItemManager(id, that) {
+    //alert("Inventory.ItemManager(" + id.toString() + ");");
+    if(id != inventory_selected) {
+        $(that).css({"margin-right":" 2px", "margin-bottom":" 2px", "background": " url('./files/images/other/hold_sprite.png') -40px 0px", "width": " 42px", "height": " 42px"});
+        var last = document.getElementsByClassName(inventory_selected.toString());
+        $(last).css({"margin-right":" 4px", "margin-bottom":" 4px", "background": " url('./files/images/other/hold_sprite.png') 0px 0px", "width": " 40px", "height": " 40px"});
+        inventory_selected = id;
+
+        $(".box_x4 #information #item_data").load("http://localhost/files/extension.php?furnidata=" + inventory_selected.toString());
+    }
+}
 
 window.onload = function(){
     $(".box_x1").draggable({
