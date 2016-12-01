@@ -154,6 +154,11 @@ window.onload = function(){
         scroll: false
     });
 
+    $(".box_x6").draggable({
+        handle: '#header',
+        scroll: false
+    });
+
     //Logout//
     $(".purse #logout").click(function () {
         window.location = "http://localhost/files/extension.php?logout=true";
@@ -305,9 +310,17 @@ function SendPacket(mymessage) {
                 var splits = res.split(";");
                 var room_status = splits[0];
                 console.log("DEBUG: Room status " + room_status + ".");
+                var splits = data.split("title=");
+                var res = splits[1];
+                var splits = res.split(";");
+                var room_title = splits[0];
+                console.log("DEBUG: Room title " + room_title + ".");
 
                 if(room_status == 1) {
                     console.log("DEBUG: Room is locked, please knock.");
+                    $(".box_x5").hide();
+                    $(".box_x6").show();
+                    $(".box_x6 #information").html(room_title + "<p>This room is locked. You need to ring the<br>doorbell to enter.</p>");
                     return;
                 }
 
@@ -319,6 +332,8 @@ function SendPacket(mymessage) {
                 if(room_status == 0) {
                     console.log("DEBUG: Room is unlocked, entering..");
                     $(".box_x5").hide();
+                    SendPacket("RoomManager.ProceedRoom(" + roomid + ");");
+                    return;
                 }
             });
         }

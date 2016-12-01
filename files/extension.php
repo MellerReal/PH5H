@@ -97,6 +97,7 @@ else if(isset($_GET["room_data"])) {
     echo "owner=" . $room["owner"] . ";<br>\n";
     echo "actives=" . $room["actives"] . ";<br>\n";
     echo "max=" . $room["max_visits"] . ";<br>\n";
+    echo "title=" . $room["title"] . ";<br>\n";
     echo "status=" . $room["status"] . ";";
     mysqli_close($conn);
 }

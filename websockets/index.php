@@ -140,7 +140,7 @@ $user_colour = array_rand($colours);
                     }
                 }
                 else
-                    $('#message_box').append("<div><span class=\"user_name\" style=\"color:#"+ucolor+"\">"+uname+"</span> : <span class=\"user_message\">"+umsg+"</span></div>");
+                    $('#message_box').append("<div><span class=\"user_message\">"+umsg+"</span></div>");
             }
             if(type == 'system')
             {

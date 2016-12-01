@@ -182,6 +182,20 @@
         </div>
         <!-- End of Error Box #3 -->
 
+        <!-- Door Box #6 -->
+        <div class="box_x6">
+            <div id="header">
+                <p id="title">Doorbell</p>
+                <div id="close" onclick="cross('box_x6')"></div>
+            </div>
+            <p id="information">
+                -
+            </p>
+            <p id="cancel" onclick="RoomManager('enter', )">Cancel</p>
+            <div id="button" onclick="cross('box_x6')">Ring doorbell</div>
+        </div>
+        <!-- End of Door Box #6 -->
+
         <!-- Footer -->
             <footer>
                 <div id="view" title="Go to your home room"></div>
