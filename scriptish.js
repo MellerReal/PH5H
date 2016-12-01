@@ -7,6 +7,7 @@
  box_x2 - Box #2 - Help
  box_x3 - Box #3 - Custom Error
  box_x4 - Box #4 - Inventory
+ box_x5 - Box #5 - Navigator
  */
 
 function cross(parent) {
@@ -25,6 +26,51 @@ function findFriends(id) {
 function InventoryManagerPlaneInRoom() {
     $(".box_x3 #information").html("You're not in any room!");
     $(".box_x3").show();
+}
+
+function RoomManager(id) {
+    if(id == "minimize_all") {
+        if(navigator_all_toggle == 0)
+            navigator_all_toggle = 1;
+        else
+            navigator_all_toggle = 0;
+        RoomManager("all"); //Refresh
+    }
+    else if(id == "minimize_games") {
+        if(navigator_games_toggle == 0)
+            navigator_games_toggle = 1;
+        else
+            navigator_games_toggle = 0;
+        RoomManager("all"); //Refresh
+    }
+    else if(id == "public") {
+        $(".box_x5 #information").load("./files/extension.php?nav_publics=true");
+        $(".box_x5 #bar #furnitures").css({"background" : " #ECEAE0", "border-left" : " 2px solid #FFF", "border-right" : " 2px solid #FFF", "border-top" : " 2px solid #FFF", "box-shadow" : " 0px 0px 0px 2px #000", "margin-right" : " -2px", "padding-left" : " 8px", "padding-right" : " 8px"});
+        $(".box_x5 #bar #rentables").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+        $(".box_x5 #bar #pets").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+        $(".box_x5 #bar #badges").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+    }
+    else if(id == "all") {
+        $(".box_x5 #information").load("./files/extension.php?nav_all=" + navigator_all_toggle + navigator_games_toggle);
+        $(".box_x5 #bar #rentables").css({"background" : " #ECEAE0", "border-left" : " 2px solid #FFF", "border-right" : " 2px solid #FFF", "border-top" : " 2px solid #FFF", "box-shadow" : " 0px 0px 0px 2px #000", "margin-right" : " -2px", "padding-left" : " 8px", "padding-right" : " 8px"});
+        $(".box_x5 #bar #furnitures").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+        $(".box_x5 #bar #pets").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+        $(".box_x5 #bar #badges").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+    }
+    else if(id == "events") {
+        $(".box_x5 #information").html("RoomManager.Events().html();");
+        $(".box_x5 #bar #pets").css({"background" : " #ECEAE0", "border-left" : " 2px solid #FFF", "border-right" : " 2px solid #FFF", "border-top" : " 2px solid #FFF", "box-shadow" : " 0px 0px 0px 2px #000", "margin-right" : " -2px", "padding-left" : " 8px", "padding-right" : " 8px"});
+        $(".box_x5 #bar #rentables").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+        $(".box_x5 #bar #furnitures").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+        $(".box_x5 #bar #badges").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+    }
+    else if(id == "my") {
+        $(".box_x5 #information").html("RoomManager.My().html();");
+        $(".box_x5 #bar #badges").css({"background" : " #ECEAE0", "border-left" : " 2px solid #FFF", "border-right" : " 2px solid #FFF", "border-top" : " 2px solid #FFF", "box-shadow" : " 0px 0px 0px 2px #000", "margin-right" : " -2px", "padding-left" : " 8px", "padding-right" : " 8px"});
+        $(".box_x5 #bar #rentables").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+        $(".box_x5 #bar #pets").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+        $(".box_x5 #bar #furnitures").css({"background" : " #C3C2B8", "border-left" : " 1px solid #4D4C49", "border-right" : " 1px solid #4D4C49", "border-top" : " 1px solid #4D4C49", "box-shadow" : " 0px 0px 0px 0px #000", "margin-right" : " -4px", "padding-left" : " 12px", "padding-right" : " 12px"});
+    }
 }
 
 function InventoryManager(id) {
@@ -72,6 +118,8 @@ function InventoryManager(id) {
 
 var footer_right_toggle = 0;
 var inventory_selected = 0;
+var navigator_all_toggle = 0;
+var navigator_games_toggle = 0;
 
 function ItemManager(id, that) {
     //alert("Inventory.ItemManager(" + id.toString() + ");");
@@ -97,6 +145,11 @@ window.onload = function(){
     });
 
     $(".box_x4").draggable({
+        handle: '#header',
+        scroll: false
+    });
+
+    $(".box_x5").draggable({
         handle: '#header',
         scroll: false
     });
@@ -209,4 +262,102 @@ window.onload = function(){
         $(".box_x4").show();
     });
     // End of Inventory //
+
+    // Navigator //
+    $("#navigator").click(function () {
+        $(".box_x5").show();
+    });
+    // End of Navigator //
 };
+
+function SendPacket(mymessage) {
+    var myname = usrnme; //get user name
+
+    if(myname == ""){ //empty name?
+        alert("Name empty");
+    }
+
+    if(mymessage.substring(0, 11) == "RoomManager") {
+        if(mymessage.substring(12, 21) == "EnterRoom") {
+            console.log("DEBUG: Attempting to enter room..");
+            var splits = mymessage.split("(");
+            var res = splits[1];
+            var splits = res.split(")");
+            var roomid = splits[0];
+            $.get('./files/extension.php?room_data=' + roomid,function(data) {
+                var splits = data.split("owner=");
+                var res = splits[1];
+                var splits = res.split(";");
+                var room_owner = splits[0];
+                console.log("DEBUG: Room owner " + room_owner + ".");
+                var splits = data.split("actives=");
+                var res = splits[1];
+                var splits = res.split(";");
+                var room_actives = splits[0];
+                console.log("DEBUG: Room actives " + room_actives + ".");
+                var splits = data.split("max=");
+                var res = splits[1];
+                var splits = res.split(";");
+                var room_max = splits[0];
+                console.log("DEBUG: Room max " + room_max + ".");
+                var splits = data.split("status=");
+                var res = splits[1];
+                var splits = res.split(";");
+                var room_status = splits[0];
+                console.log("DEBUG: Room status " + room_status + ".");
+
+                if(room_status == 1) {
+                    console.log("DEBUG: Room is locked, please knock.");
+                    return;
+                }
+
+                if(room_status == 2) {
+                    console.log("DEBUG: Room is password locked, please knock.");
+                    return;
+                }
+
+                if(room_status == 0) {
+                    console.log("DEBUG: Room is unlocked, entering..");
+                    $(".box_x5").hide();
+                }
+            });
+        }
+    }
+
+    //prepare json data
+    mymessage = myname + "." + mymessage;
+    var msg = {
+        name : myname,
+        message: mymessage,
+        color : '<?php echo $colours[$user_colour]; ?>'
+    };
+    //convert and send data to server
+    websocket.send(JSON.stringify(msg));
+};
+
+$(document).ready(function(){
+    //create a new WebSocket object.
+    var wsUri = "ws://localhost:9000/demo/server.php";
+    websocket = new WebSocket(wsUri);
+    websocket.onopen = function(ev) { // connection is open
+        //$('#message_box').append("<div class=\"system_msg\">Connected!</div>"); //notify user
+        //alert("DEBUG: Connected with PHP Websockets");
+        console.log("DEBUG: Connected with PHP websockets.");
+    }
+    websocket.onmessage = function(ev) {
+        var msg = JSON.parse(ev.data); //PHP sends Json data
+        var umsg = msg.message; //message text
+        if (umsg.substring(0, 1) == ":") {
+            if(umsg.substring(1, 4) == "ha ") {
+                    //$(".box_x2").show();
+            }
+        }
+        //else
+        //$('#message_box').append("<div><span class=\"user_name\" style=\"color:#"+ucolor+"\">"+uname+"</span> : <span class=\"user_message\">"+umsg+"</span></div>");
+    };
+
+    websocket.onerror	= function(ev){
+        $(".disconnected").show();
+    };
+    //websocket.onclose 	= function(ev){$('#button2').click();};
+});

@@ -8,14 +8,15 @@
         <link rel="shortcut icon" href="https://habboo-a.akamaihd.net/habbo-web/america/en/assets/images/favicon.08c747be.ico">
         <script src="//code.jquery.com/jquery-1.10.2.js"></script>
         <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
-        <script src="scriptish.js" rel="script"></script>
         <?php session_start(); ?>
+        <?php if(isset($_SESSION["username"])) echo "<script>var usrnme = '" . $_SESSION["username"] . "';</script>"; ?>
+        <script src="scriptish.js" rel="script"></script>
         <?php
         if(!$conn = mysqli_connect("localhost", "root", "", "PH5H"))
             die("Fatal Error, could not connect to database.");
         ?>
     </head>
-    <body onload="InventoryManager('furni');">
+    <body onload="InventoryManager('furni'); RoomManager('all');">
         <!-- Load External Variables (PHP) -->
         <?php require "files/external_variables.php"; echo"\n"; ?>
         <!-- End of Loading External Variables -->
@@ -85,6 +86,12 @@
             ?>
         <!-- End of Logon -->
 
+        <!-- Disconnected -->
+            <div class="disconnected">
+
+            </div>
+        <!-- End of Disconnected -->
+
         <!-- Purse -->
             <div class="purse">
                 <div class="button_x1" id="help" title="Help">Help</div>
@@ -128,22 +135,39 @@
         <!-- End of Help Box -->
 
         <!-- Inventory -->
-            <div class="box_x4">
-                <div id="header">
-                    <p id="title">Inventory (Paused for the RoomManager to get in the view)</p>
-                    <div id="close" onclick="cross('box_x4');"></div>
-                </div>
-                <div id="information">
-                </div>
-                <div id="bar">
-                    <p id="furnitures" onclick="InventoryManager('furni');">Furnitures</p>
-                    <p id="rentables" onclick="InventoryManager('rentables');">Rentables</p>
-                    <p id="pets" onclick="InventoryManager('pets');">Pets</p>
-                    <p id="badges" onclick="InventoryManager('badges');">Badges</p>
-                    <p id="bots" onclick="InventoryManager('bots');">Bots</p>
-                </div>
+        <div class="box_x4">
+            <div id="header">
+                <p id="title">Inventory (Paused for the RoomManager to get in the view)</p>
+                <div id="close" onclick="cross('box_x4');"></div>
             </div>
+            <div id="information">
+            </div>
+            <div id="bar">
+                <p id="furnitures" onclick="InventoryManager('furni');">Furnitures</p>
+                <p id="rentables" onclick="InventoryManager('rentables');">Rentables</p>
+                <p id="pets" onclick="InventoryManager('pets');">Pets</p>
+                <p id="badges" onclick="InventoryManager('badges');">Badges</p>
+                <p id="bots" onclick="InventoryManager('bots');">Bots</p>
+            </div>
+        </div>
         <!-- End of Inventory -->
+
+        <!-- Navigator -->
+        <div class="box_x5">
+            <div id="header">
+                <p id="title">Navigator</p>
+                <div id="close" onclick="cross('box_x5');"></div>
+            </div>
+            <div id="information">
+            </div>
+            <div id="bar">
+                <p id="furnitures" onclick="RoomManager('public');">Public</p>
+                <p id="rentables" onclick="RoomManager('all');">All Rooms</p>
+                <p id="pets" onclick="RoomManager('events');">Events</p>
+                <p id="badges" onclick="RoomManager('my');">My World</p>
+            </div>
+        </div>
+        <!-- End of Navigator -->
 
         <!-- Error Box #3 -->
         <div class="box_x3" id="centre2">

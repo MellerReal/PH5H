@@ -1080,10 +1080,432 @@ footer #user img {
     left: 0;
     bottom: 35px;
     background: url("./files/images/other/button2.png") transparent;
-    border:none;
+    border: none;
     font-size: 10pt;
     text-align: center;
     cursor: pointer;
     box-shadow: none;
     padding-top: 3px;
+}
+
+.box_x5 {
+    margin-top: 5%;
+    margin-left: auto;
+    margin-right: auto;
+    display: none;
+    z-index: 100;
+    height: 528px;
+    width: 419px;
+    background: #E9E9E1;
+    border: 2px solid #FFF;
+    box-shadow: 0px 0px 0px 1px #000;
+    border-radius: 8px;
+}
+.box_x5 #header {
+    width: 423px;
+    margin-left: -2px;
+    margin-top: -2px;
+    height: 33px;
+    background: #367897;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid #000;
+}
+
+.box_x5 #header #title {
+    margin-top: 0px;
+    padding-top: 7px;
+    cursor: default;
+    font-family: "Titles";
+    color: #FFF;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 11pt;
+}
+
+.box_x5 #information {
+    position: absolute;
+    top: 78px;
+    cursor: default;
+    color: #000;
+    font-size: 10pt;
+    font-family: "Normal";
+    font-weight: bold;
+    background-color: #ECEAE0;
+    width: 100%;
+    height: 422px;
+    z-index: 61;
+    overflow: hidden;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.box_x5 #furnitures, .box_x5 #rentables, .box_x5 #bots, .box_x5 #badges, .box_x5 #pets {
+
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    margin-top: 5px;
+    border-top-left-radius: 8px;
+    font-family: "Light";
+    font-weight: normal;
+    font-size: 10pt;
+    padding-top: 10px;
+    border-top-right-radius: 8px;
+    border-left: 1px solid #4D4C49;
+    border-top: 1px solid #4D4C49;
+    border-right: 1px solid #4D4C49;
+    display: inline-block;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-right: -4px;
+    height: 27px;
+    width: auto;
+    background: #C3C2B8;
+    cursor: pointer;
+}
+
+.box_x5 #furnitures:hover, .box_x5 #rentables:hover, .box_x5 #bots:hover, .box_x5 #badges:hover, .box_x5 #pets:hover {
+    background: #ECEAE0;
+    border-left: 2px solid #FFF;
+    border-top: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    box-shadow: 0px 0px 0px 1px #000;
+    margin-right: -3px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.box_x5 #furnitures { /* Also selected */
+    margin-left: 15px;
+
+    /* Selected */
+    background: #ECEAE0;
+    border-left: 2px solid #FFF;
+    border-top: 2px solid #FFF;
+    border-right: 2px solid #FFF;
+    box-shadow: 0px 0px 0px 2px #000;
+    margin-right: -2px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.box_x5 #bar {
+    margin-top: 6px;
+    width: 415px;
+    height: 39px;
+    background-color: transparent;
+    float: left;
+    border-bottom: 1px solid #000;
+    box-shadow: 0px 1px 0px #FFF;
+}
+
+.box_x5 #information .popular {
+    background: #FFF;
+    width: 388px;
+    height: auto;
+    margin-top: 8px;
+    margin-left: 10px;
+    padding-top: 14px;
+}
+
+
+.box_x5  #information .popular #room:nth-child(odd) {
+    background-color: #D5EDFF;
+}
+.box_x5  #information .popular #room:nth-child(even) {
+    background-color: #FFF;
+}
+
+.box_x5 #information .popular #room {
+    width: 383px;
+    margin-left: 4px;
+    height: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.box_x5 #information .popular #room #actives_green {
+    padding-top: 4.5px;
+    padding-left: 21px;
+    background: url("./files/images/other/actives_sprite.png") 0px -36px;
+    height: 13px;
+    width: 19px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-family: "Volter";
+    color: #fff;
+    font-size: 8pt;
+    display: inline-block;
+}
+
+.box_x5 #information .popular #room #actives_orange {
+    padding-top: 4.5px;
+    padding-left: 21px;
+    background: url("./files/images/other/actives_sprite.png") 0px -18px;
+    height: 13px;
+    width: 19px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-family: "Volter";
+    color: #fff;
+    font-size: 8pt;
+    display: inline-block;
+}
+
+.box_x5 #information .popular #room #actives_red {
+    padding-top: 4.5px;
+    padding-left: 21px;
+    background: url("./files/images/other/actives_sprite.png") 0px 0px;
+    height: 13px;
+    width: 19px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-family: "Volter";
+    color: #fff;
+    font-size: 8pt;
+    display: inline-block;
+}
+
+.box_x5 #information .popular #room #title {
+    margin-left: 6px;
+    font-family: Arial;
+    color: #000;
+    font-weight: normal;
+    font-size: 9pt;
+    margin-top: -1px;
+    display: inline-block;
+}
+
+.box_x5 #information .popular #room #info {
+    background: url("./files/images/other/sprites.png") -156px -16px;
+    width: 18px;
+    float: right;
+    margin-right: 6px;
+    margin-top: 1px;
+    height: 18px;
+    display: inline-block;
+}
+.box_x5 #information .popular #room #group {
+    background: url("./files/images/other/sprites.png") -174px -15px;
+    width: 13px;
+    float: right;
+    margin-right: 4px;
+    margin-top: 5px;
+    height: 11px;
+    display: inline-block;
+}
+.box_x5 #information .popular #room #locked {
+    background: url("./files/images/other/sprites.png") -183px 0px;
+    width: 13px;
+    float: right;
+    margin-right: 4px;
+    margin-top: 2.5px;
+    height: 16px;
+    display: inline-block;
+}
+.box_x5 #information .popular #room #password {
+    background: url("./files/images/other/sprites.png") -196px 0px;
+    width: 13px;
+    float: right;
+    margin-right: 4px;
+    margin-top: 2.5px;
+    height: 16px;
+    display: inline-block;
+}
+
+.box_x5 #information .popular #minimize {
+    height: 2px;
+    width: 11px;
+    background-color: #7DD8F6;
+    margin-left: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.box_x5 #information .popular #maximize {
+    background: url("./files/images/other/sprites.png") -209px 0px;
+    height: 16px;
+    width: 9px;
+    margin-top: -4px;
+    margin-left: 9px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.box_x5 #information .popular #title {
+    margin-top: -20px;
+    margin-left: 29px;
+    font-family: "Normal";
+    color: #0F557B;
+    font-size: 10pt;
+}
+
+.box_x5 #information .popular .rooms_all {
+    margin-top: 0px;
+}
+
+.disconnected {
+    background-color: rgba(12, 58, 101, 0.80);
+    width: 100%;
+    height: 100%;
+    z-index: 500;
+
+}
+
+
+.box_x5 #information .games {
+    background: #FFF;
+    width: 388px;
+    height: auto;
+    margin-top: 8px;
+    margin-left: 10px;
+    padding-top: 14px;
+}
+
+
+.box_x5  #information .games #room:nth-child(odd) {
+    background-color: #D5EDFF;
+}
+.box_x5  #information .games #room:nth-child(even) {
+    background-color: #FFF;
+}
+
+.box_x5 #information .games #room {
+    width: 383px;
+    margin-left: 4px;
+    height: 20px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.box_x5 #information .games #room #actives_green {
+    padding-top: 4.5px;
+    padding-left: 21px;
+    background: url("./files/images/other/actives_sprite.png") 0px -36px;
+    height: 13px;
+    width: 19px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-family: "Volter";
+    color: #fff;
+    font-size: 7pt;
+    display: inline-block;
+}
+
+
+#actives_grey {
+    background: url("./files/images/other/actives_sprite.png?") 0px -54px;
+    height: 18px;
+    width: 40px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    display: inline-block;
+}
+
+.box_x5 #information .games #room #actives_orange {
+    padding-top: 4.5px;
+    padding-left: 21px;
+    background: url("./files/images/other/actives_sprite.png") 0px -18px;
+    height: 13px;
+    width: 19px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-family: "Volter";
+    color: #fff;
+    font-size: 7pt;
+    display: inline-block;
+}
+
+.box_x5 #information .games #room #actives_red {
+    padding-top: 4.5px;
+    padding-left: 21px;
+    background: url("./files/images/other/actives_sprite.png") 0px 0px;
+    height: 13px;
+    width: 19px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    font-family: "Volter";
+    color: #fff;
+    font-size: 7pt;
+    display: inline-block;
+}
+
+.box_x5 #information .games #room #title {
+    margin-left: 6px;
+    font-family: Arial;
+    color: #000;
+    font-weight: normal;
+    font-size: 9pt;
+    margin-top: -1px;
+    display: inline-block;
+}
+
+.box_x5 #information .games #room #info {
+    background: url("./files/images/other/sprites.png") -156px -16px;
+    width: 18px;
+    float: right;
+    margin-right: 6px;
+    margin-top: 1px;
+    height: 18px;
+    display: inline-block;
+}
+.box_x5 #information .games #room #group {
+    background: url("./files/images/other/sprites.png") -174px -15px;
+    width: 13px;
+    float: right;
+    margin-right: 4px;
+    margin-top: 5px;
+    height: 11px;
+    display: inline-block;
+}
+.box_x5 #information .games #room #locked {
+    background: url("./files/images/other/sprites.png") -183px 0px;
+    width: 13px;
+    float: right;
+    margin-right: 4px;
+    margin-top: 2.5px;
+    height: 16px;
+    display: inline-block;
+}
+.box_x5 #information .games #room #password {
+    background: url("./files/images/other/sprites.png") -196px 0px;
+    width: 13px;
+    float: right;
+    margin-right: 4px;
+    margin-top: 2.5px;
+    height: 16px;
+    display: inline-block;
+}
+
+.box_x5 #information .games #minimize {
+    height: 2px;
+    width: 11px;
+    background-color: #7DD8F6;
+    margin-left: 8px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    display: inline-block;
+}
+
+.box_x5 #information .games #maximize {
+    background: url("./files/images/other/sprites.png") -209px 0px;
+    height: 16px;
+    width: 9px;
+    margin-top: -4px;
+    margin-left: 9px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.box_x5 #information .games #title {
+    margin-top: -20px;
+    margin-left: 29px;
+    font-family: "Normal";
+    color: #0F557B;
+    font-size: 10pt;
+}
+
+.box_x5 #information .games .rooms_games {
+    margin-top: 0px;
 }
